@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- action 속성 : 데이터를 전송할 주소 -->
+    <!-- method : 데이터를 전송할 방법 -->
+    <!-- get : 전송하는 데이터가 url에 붙어서 간다. 전송하는 데이터가 url에 노출이 됨 -->
+    <!-- 그래서 보완이 취약할 수 있음 -->
+    <!-- 그렇다고 쓰지 않을까? 아니다 언제 쓰냐면 페이지 주소를 공유할 때 -->
+    <!-- url에 데이터를 붙여서 보내기에 전송할 수 있는 데이터의 크기 제약 -->
+
+    <!-- post -->
+    <!-- 전송하는 데이터가 url에 붙지 않음, 사용자 눈에 보이지 않음 -->
+    <!-- 사용자 눈에 보이지 않기 때문에 보완적으로 조금 더 안정 -->
+    <!-- 결국은 전송하는 데이터를 확인할 수 있다. 개발자 도구 같은 소프트웨어를 통해서 -->
+    <!-- 전송하는 데이터를 암호화 하는 것이 좋다. -->
+    <!-- http에 s가 붙은건 secure가 추가 된것임 -->
+    <!-- 예를 들어 https 프로토콜 사용하면 암호화가 된다. -->
+    <!-- 전송할 수 있는 데이터의 크기에 제약이 없다. -->
+
+    <!-- target : 데이터를 전송할 창을 어디로 할꺼냐 -->
+    <!-- _self : 자기 자신 창  -->
+    <!-- _blank : 새창(새탭)에 창을 연다  -->
+    <!-- _parent, _top : 추후에 공부 -->
+
+    <!-- novalidate : form 태그 안의 input 요소의 정합성을 체크 하지 않는다. -->
+    <form action="전송할 주소(서버주소)" method="get" target="_self" novalidate>
+      <div>
+        <label for="name">이름</label>
+        <input type="text" name="name" id="name" autocomplete="on" />
+      </div>
+      <div>
+        <label for="tel">연락처</label>
+        <input type="tel" name="tel" id="tel" />
+      </div>
+      <div>
+        <label for="email">이메일</label>
+        <input type="email" name="email" id="email" />
+      </div>
+    </form>
+    <button type="submit">저장</button>
+    <!-- <button type="submit" formnovalidate="formnovalidate">저장</button> -->
+  </body>
+</html>
